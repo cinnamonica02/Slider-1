@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+/* Custom properties start*/
+:root {
+    --blush: #BC544B;
+    --cantaloupe: #FDA172;
+    --pistachio: #B2D3C2;
+    --butter-milk: #FDEFB2;
+    --sky: #63C5DA;
+    --olive: #98BF64;
+    --royal-periwinkle: #BE93D4;
+    --main-gray: #303841;
+    --main-white: #f0f0f0;
+}
+
+*
+{
+    font-family: 'Lora', serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.2 linear;
+}
+
+/* Custom properties end*/  
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--main-white);  
+}
+a
+{
+    text-decoration:none;
+}
+.box
+{
+    width: 300px;
+    box-shadow: 2px 2px 30px var(--main-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px;
+}
+.slide-img
+{
+    height: 450px;
+    position: relative;
+}
+.slide-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.detail-box
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+.type
+{
+    display: flex;
+    flex-direction: column;
+}
+.type a
+{
+    color: var(--main-gray);
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+.type span
+{
+    color: var(--main-gray);
+}
+.price
+{
+    color: var(--sky);
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+
+}
+.overlay
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92,95,236,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-img:hover .overlay
+{
+    visibility: visible;
+    animation:fade 0.5s;
+}
+.overlay
+{
+    visibility: hidden;
+}
+.buy-btn
+{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-white);
+    color: var(--main-gray);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px30px rgba(0,0,0,0.2);
+}
+.buy-btn:hover
+{
+    color: var(--main-white);
+    background-color: var(--cantaloupe);
+    transition: all ease 0.3s;
+}
+/* a little animation */
+@keyframes fade
+{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.slider 
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
